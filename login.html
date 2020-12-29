@@ -20,7 +20,13 @@
 	<link href="./SignUp_files/light(1).css" rel="stylesheet" type="text/css">
 	<link href="./SignUp_files/navy.css" rel="stylesheet" type="text/css">
 	<link href="./SignUp_files/navy(1).css" rel="stylesheet" type="text/css"><!--end::Layout Skins -->
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 	
 </head><!-- end::Head -->
 <!-- begin::Body -->
@@ -70,23 +76,21 @@
 	</div><!-- end:: Page -->
 	<!-- begin::Global Config(global config for global JS sciprts) -->
 </body>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<link
-      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 <script>
       function loginFunction() {
-        axios
-          .post("https://bgzok6oesi.execute-api.us-east-1.amazonaws.com/aplha", {
-          })
-          .then(function(response) {
-            	console.log("Response : " + JSON.stringify(response.data));
-              toastr.options.timeOut = 4000;
-              toastr.error(response.data.message);
-          })
+        // axios
+        //   .post("https://bgzok6oesi.execute-api.us-east-1.amazonaws.com/aplha", {
+        //   })
+        //   .then(function(response) {
+        //       console.log("Response : " + JSON.stringify(response.data));
+        //       toastr.options.timeOut = 4000;
+        //       toastr.error(response.data.message);
+		//   })
+		axios.post("https://dfyazkzrua.execute-api.us-east-1.amazonaws.com/beta/login").then(function(response) {
+			console.log("Response : " + JSON.stringify(response.data));
+			toastr.options.timeOut = 4000;
+			toastr.error(response.data.message);
+		})
       }
 </script>
 </html>
