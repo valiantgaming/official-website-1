@@ -77,11 +77,9 @@
 </body>
 <script>
       function loginFunction() {
-		toastr.options.timeOut = 4000;
-		toastr.error("Invalid Credentials");
-		axios.get("https://example.com").then(function(response) {
+		axios.get("https://dfyazkzrua.execute-api.us-east-1.amazonaws.com/beta/login").then(function(response) {
 			console.log("Response : " + JSON.stringify(response.data));
-			toastr.options.timeOut = 4000;
+			toastr.options.timeOut = 7000;
 			toastr.error(response.data.message);
 		})
       }
