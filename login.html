@@ -39,7 +39,7 @@
 					<h3 class="kt-portlet__head-title">Login</h3>
 				</div>
 			</div><!--begin::Form-->
-			<form autocomplete="off" class="kt-form kt-form--label-right" id="kt_signup_form" name="kt_signup_form" onsubmit="loginFunction()" >
+			<form autocomplete="off" class="kt-form kt-form--label-right" id="kt_signup_form" name="kt_signup_form">
 				<div class="kt-portlet__body">
 					<div class="form-group">
 						<label>Your work email</label> <input autocomplete="off" class="form-control" id="email" name="email" placeholder="" type="text">
@@ -50,7 +50,7 @@
 				</div>
 				<div class="kt-portlet__foot">
 					<div class="kt-form__actions">
-						<button class="btn btn-primary" id="kt_signup_submit" style="width: 100%" type="submit">Login In</button>
+						<button class="btn btn-primary" id="kt_signup_submit" style="width: 100%" type="submit"  onclick="loginFunction()">Login In</button>
 					</div>
 				</div>
 			</form><!--end::Form-->
