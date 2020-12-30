@@ -76,14 +76,8 @@
 </body>
 <script>
       function loginFunction() {
-        // axios
-        //   .post("https://bgzok6oesi.execute-api.us-east-1.amazonaws.com/aplha", {
-        //   })
-        //   .then(function(response) {
-        //       console.log("Response : " + JSON.stringify(response.data));
-        //       toastr.options.timeOut = 4000;
-        //       toastr.error(response.data.message);
-		//   })
+		toastr.options.timeOut = 4000;
+		toastr.error("Invalid Credentials");
 		axios.get("https://example.com").then(function(response) {
 			console.log("Response : " + JSON.stringify(response.data));
 			toastr.options.timeOut = 4000;
