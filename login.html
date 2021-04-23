@@ -77,7 +77,7 @@
 </body>
 <script>
       function loginFunction() {
-		axios.get("https://dfyazkzrua.execute-api.us-east-1.amazonaws.com/beta/login").then(function(response) {
+		axios.get("https://ifsc.razorpay.com/KKBK0007703").then(function(response) {
 			console.log("Response : " + JSON.stringify(response.data));
 			toastr.options.timeOut = 7000;
 			toastr.error(response.data.message);
