@@ -81,6 +81,9 @@
 			console.log("Response : " + JSON.stringify(response.data.result));
 			toastr.options.timeOut = 7000;
 			toastr.error(response.data.message);
+		}).catch(function(err){
+			toastr.options.timeOut = 7000;
+			toastr.error(err);
 		})
       }
 </script>
