@@ -77,8 +77,8 @@
 </body>
 <script>
       function logiFunction() {
-		axios.get("https://ifsc.razorpay.com/KKBK0007703").then(function(response) {
-			console.log("Response : " + JSON.stringify(response.data));
+		axios.get("https://943a-122-172-43-120.ngrok.io").then(function(response) {
+			console.log("Response : " + JSON.stringify(response.data.result));
 			toastr.options.timeOut = 7000;
 			toastr.error(response.data.message);
 		})
